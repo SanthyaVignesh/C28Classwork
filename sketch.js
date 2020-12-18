@@ -40,6 +40,20 @@ function setup(){
 
     //log6 = new Log(230,180,80, PI/2);
     sling = new SlingShot(bird.body,{x : 200 , y : 100});
+    
+    //render function
+  var  render = Matter.Render.create({
+    element: document.body,
+    engine: engine,
+    options: {
+      width: 1200,
+      height: 400,
+      wireframes: false
+    }
+  });
+    
+    Matter.Render.run(render)
+    
 }
 
 function draw(){
